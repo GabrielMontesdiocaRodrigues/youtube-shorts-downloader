@@ -5,16 +5,16 @@ from asyncio import run
 from aiogram import Bot, Dispatcher
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
 
-from tgbot.config import load_config, Config
-from tgbot.filters.admin import AdminFilter
-from tgbot.handlers.admin import register_admin_handlers
-from tgbot.handlers.commands import register_commands_handlers
-from tgbot.handlers.error import register_errors_handlers
-from tgbot.handlers.messages import register_messages_handlers
-from tgbot.middlewares.localization import i18n
-from tgbot.misc.commands import set_default_commands
-from tgbot.misc.logger import logger
-from tgbot.services.database import database
+from source.config import load_config, Config
+from source.filters.admin import AdminFilter
+from source.handlers.admin import register_admin_handlers
+from source.handlers.commands import register_commands_handlers
+from source.handlers.error import register_errors_handlers
+from source.handlers.messages import register_messages_handlers
+from source.middlewares.localization import i18n
+from source.misc.commands import set_default_commands
+from source.misc.logger import logger
+from source.services.database import database
 
 
 def register_all_middlewares(dp: Dispatcher) -> None:
